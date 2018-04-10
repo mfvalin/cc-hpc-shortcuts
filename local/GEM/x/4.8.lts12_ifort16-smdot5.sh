@@ -11,4 +11,11 @@ export ATM_MODEL_VERSION=4.8.lts12
    export PATH=${HOME}/modeles/GEMDM/v_4.8.lts12/bin/${BASE_ARCH}:$PATH
 [[ -d "${HOME}/modeles/GEMDM/v_4.8.lts12/bin" ]] && \
    echo "======================================================================"
+if [[ -d "${HOME}/modeles/GEMDM/v_4.8.lts12/lib" ]] ; then
+   [[ -d "${HOME}/modeles/GEMDM/v_4.8.lts12/lib/${EC_ARCH}" ]] && \
+   echo "======================================================================" && \
+   echo "Added ${HOME}/modeles/GEMDM/v_4.8.lts12/lib/${EC_ARCH} to LIBRARIES_PATH" && \
+   echo "======================================================================" && \
+   export LIBRARIES_PATH="${LIBRARIES_PATH} ${HOME}/modeles/GEMDM/v_4.8.lts12/lib/${EC_ARCH}"
+fi
 true
