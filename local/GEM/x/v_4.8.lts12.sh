@@ -4,3 +4,5 @@ if [[ -n ${USE_GEM_DORVAL} ]] ; then
 else
   . ssmuse-sh -d ${SSM_DOMAIN_HOME%/*}/gem/v_4.8.3.lts12.u-intel
 fi
+[[ -d /project/6005781/GEM_Data ]] && export MODEL_DATA=/project/6005781/GEM_Data
+true
