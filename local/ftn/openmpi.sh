@@ -48,7 +48,7 @@ case "${COMPILER_CHOICE:-pgi}" in
            ;;
    ifort | ifort16)
            export COMP_ARCH=intel
-           module load intel
+           module load intel/2016.4
            which ifort || return 111
            ifort --version
            mpif90 --version
